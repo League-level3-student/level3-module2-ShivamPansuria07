@@ -1,7 +1,7 @@
 
 package _00_Intro_to_Sorting_Algorithms;
 
-public class _01_SortedArrayChecker {
+public class _01_SortedArrayChecker   {
     /*
      * Write a static method called intArraySorted.
      *
@@ -55,8 +55,18 @@ for (int i = 0; i < arr.length; i++) {
      * order and false otherwise (You can compare characters just like
      * integers).
      */
-
-
+    public static boolean charArraySorted(char[] arr3) {
+    	for (int k = 0; k < arr3.length - 1; k++) {
+            // If the current element is bigger than the next...
+            if( arr3[k] > arr3[ k+1 ] ) {
+                return true;
+            }else {
+            	return true;
+            }
+        }
+    
+	return false;
+    }
     /*
      * 4. Write a static method called stringArraySorted.
      *
@@ -64,5 +74,16 @@ for (int i = 0; i < arr.length; i++) {
      *  The method returns true if the String array is in alphabetical
      *  order and false otherwise (Use the compareTo(String) method).
      */
-
+    public static boolean charArraySorted(String[] arr3) {
+    	for (int i = 0; i < arr3.length; i++) {
+            for (int k = 0; k < arr3.length - 1; k++) {
+                if( arr3[k].compareTo(arr3[ k+1 ]) > 0 ) {
+                    return false;
+                }else {
+                	return false;
+                }
+            }
+        }
+		return false;
+    }
 }
