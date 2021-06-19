@@ -56,7 +56,12 @@ public class ThanosSorter extends Sorter {
 						}
 						end = sum / 2;
 					} else {
-
+						//lmao idk figure it out nerd
+						int sum1 = start + end;
+						for (int j = sum1 / 2 + 1; j <= end; j++) {
+							array[j] = 0;	
+						}
+						start = sum1;
 					}
 				}
 			}
