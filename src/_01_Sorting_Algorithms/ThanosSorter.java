@@ -45,23 +45,48 @@ public class ThanosSorter extends Sorter {
 		int end = array.length - 1;
 
 		for (int i = 0; i < array.length; i++) {
-			for (int k = 0; k < array.length - 1; k++) {
+			for (int k = start; k < end; k++) {
+
+				try {
+					Thread.sleep(1);
+				} catch (InterruptedException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
+				display.updateDisplay();
 				if (array[k] > array[k + 1]) {
 					Random rand = new Random();
 					int n = rand.nextInt(2);
 					if (n == 1) {
 						int sum = start + end;
 						for (int j = sum / 2 + 1; j <= end; j++) {
+
 							array[j] = 0;
+							
 						}
+					
 						end = sum / 2;
-					} else {
-						//lmao idk figure it out nerd
-						int sum1 = start + end;
-						for (int j = sum1 / 2 + 1; j <= end; j++) {
-							array[j] = 0;	
+						if(start>end) {
+							System.out.println("true");
 						}
-						start = sum1;
+						System.out.println(start + ": " + end + " |  BACK");
+					} else {
+
+						int sum1 = start + end;
+
+						for (int p = sum1 / 2 + 1; p >= start; p--) {
+							display.updateDisplay();
+
+							array[p] = 0;
+						
+							
+						}
+						start = sum1 / 2 + 1;
+						if(start>end) {
+							System.out.println("true");
+						}
+						
+						System.out.println(start + ": " + end + "|  FRONT");
 					}
 				}
 			}
