@@ -11,12 +11,12 @@ import org.junit.Test;
 
 public class _00_MoreAndMoreTests {
 
-   @Test
-   public void MultTest() {
-     assertEquals("10 x 0 = 0", Algorithms.multiply(10, 0));
-     assertEquals("10 x 10 = 100", Algorithms.multiply(10, 10));
-     assertEquals("8 x 11 = 88", Algorithms.multiply(8, 11));
-   }
+  // @Test
+  // public void MultTest() {
+   //  assertEquals("10 x 0 = 0", Algorithms.multiply(10, 0));
+    // assertEquals("10 x 10 = 100", Algorithms.multiply(10, 10));
+   //  assertEquals("8 x 11 = 88", Algorithms.multiply(8, 11));
+  // }
  
    @Test
    public void PrimeTest() {
@@ -40,14 +40,14 @@ public class _00_MoreAndMoreTests {
     assertFalse(Algorithms.isSquare(143));
  }
 
- //   @Test
-  // public void CubeTest() {
-  //   assertTrue(Algorithms.isCube(27));
-   //  assertTrue(Algorithms.isCube(216));
-   //  assertTrue(Algorithms.isCube(729));
-   //  assertTrue(Algorithms.isCube(1));
-   //  assertFalse(Algorithms.isCube(3));
-   //  assertFalse(Algorithms.isCube(22));
-    // assertFalse(Algorithms.isCube(143));
-  // }
+   @Test
+  public void CubeTest() {
+    assertTrue(Algorithms.isCube(27));
+    assertTrue(Algorithms.isCube(216));
+     assertTrue(Algorithms.isCube(729));
+    assertTrue(Algorithms.isCube(1));
+    assertFalse(Algorithms.isCube(3));
+    assertFalse(Algorithms.isCube(22));
+    assertFalse(Algorithms.isCube(143));
+   }
 }
