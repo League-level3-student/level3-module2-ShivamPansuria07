@@ -38,16 +38,16 @@ public class _00_MoreAndMoreTests {
    assertFalse(Algorithms.isSquare(3));
     assertFalse(Algorithms.isSquare(22));
     assertFalse(Algorithms.isSquare(143));
- }
+ //}
 
-   @Test
-  public void CubeTest() {
-    assertTrue(Algorithms.isCube(27));
-    assertTrue(Algorithms.isCube(216));
-     assertTrue(Algorithms.isCube(729));
-    assertTrue(Algorithms.isCube(1));
-    assertFalse(Algorithms.isCube(3));
-    assertFalse(Algorithms.isCube(22));
-    assertFalse(Algorithms.isCube(143));
-   }
+   //@Test
+ // public void CubeTest() {
+   // assertTrue(Algorithms.isCube(27));
+   // assertTrue(Algorithms.isCube(216));
+   //  assertTrue(Algorithms.isCube(729));
+    //assertTrue(Algorithms.isCube(1));
+    //assertFalse(Algorithms.isCube(3));
+   // assertFalse(Algorithms.isCube(22));
+   // assertFalse(Algorithms.isCube(143));
+  }
 }

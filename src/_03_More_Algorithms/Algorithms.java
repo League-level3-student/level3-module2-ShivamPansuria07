@@ -1,5 +1,6 @@
 package _03_More_Algorithms;
 
+import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
 
@@ -7,7 +8,7 @@ import java.util.List;
  * Write your methods in this class
  */
 public class Algorithms {
-
+ 
 	public static int findBrokenEgg(List<String> eggs) {
 		int num = 0;
 		for (int i = 0; i < eggs.size(); i++) {
@@ -63,18 +64,44 @@ public class Algorithms {
 		for (int i = 0; i < message2.size(); i++) {
 			String s = message2.get(i);
 
-			if (s == "... --- ...") {
+			if (s.equals("... --- ...")) {
 				return true;
 
-			} else if(s != "... --- ..."){
-				return false;
-			}
+			} 
 			
 		}
 		
 		return false;
 
 	}
+	public static List<Double> sortScores(List<Double> results) {
+		 for (int i = 0; i < results.size(); i++) {
+	            for (int k = 0; k < results.size() - 1; k++) {
+	            	double num = results.get(k);
+	                if(num > num+1) {
+	                    double temp = num;
+	                    num = num+1;
+	                   temp = num+1;
+	                }
+	            }
+	        }
+	        
+		return results;
+	}
+	
+	public static List<String> sortDNA(List<String> unsortedSequences) {
+		for (int i = 0; i < unsortedSequences.size(); i++) {
+			String str = unsortedSequences.get(i);
+			String str2 = unsortedSequences.get(i+1);
+			if (str.length() >str2.length()) {
+				System.out.println("f");
+				
+			}
+			
+		}
+		return unsortedSequences;
+		}
+	
 //MoreAndMoreTests	
 
 	public static boolean isPrime(int i) {
@@ -99,5 +126,9 @@ public class Algorithms {
 		}
 
 	}
+
+	
+
+	
 
 }
