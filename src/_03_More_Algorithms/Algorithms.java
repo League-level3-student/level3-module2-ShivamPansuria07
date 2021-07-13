@@ -1,14 +1,16 @@
 package _03_More_Algorithms;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.Iterator;
 import java.util.List;
+import java.util.Map;
 
 /*
  * Write your methods in this class
  */
 public class Algorithms {
- 
+
 	public static int findBrokenEgg(List<String> eggs) {
 		int num = 0;
 		for (int i = 0; i < eggs.size(); i++) {
@@ -67,41 +69,71 @@ public class Algorithms {
 			if (s.equals("... --- ...")) {
 				return true;
 
-			} 
-			
+			}
+
 		}
-		
+
 		return false;
 
 	}
+
 	public static List<Double> sortScores(List<Double> results) {
-		 for (int i = 0; i < results.size(); i++) {
-	            for (int k = 0; k < results.size() - 1; k++) {
-	            	double num = results.get(k);
-	                if(num > num+1) {
-	                    double temp = num;
-	                    num = num+1;
-	                   temp = num+1;
-	                }
-	            }
-	        }
-	        
+		for (int i = 0; i < results.size(); i++) {
+			for (int k = 0; k < results.size() - 1; k++) {
+
+				if (results.get(k) > results.get(k + 1)) {
+					Double temp = results.get(k);
+					double dob = results.get(k + 1);
+					results.set(k, dob);
+					results.set(k + 1, temp);
+
+				}
+			}
+		}
+
 		return results;
 	}
-	
+
 	public static List<String> sortDNA(List<String> unsortedSequences) {
 		for (int i = 0; i < unsortedSequences.size(); i++) {
-			String str = unsortedSequences.get(i);
-			String str2 = unsortedSequences.get(i+1);
-			if (str.length() >str2.length()) {
-				System.out.println("f");
-				
+			for (int k = 0; k < unsortedSequences.size() - 1; k++) {
+				String str = unsortedSequences.get(k); 
+				String str2 = unsortedSequences.get(k + 1);
+				int num = str.length();
+				int num2 = str2.length();
+				if (num > num2) {
+					String temp = unsortedSequences.get(k);
+					String dob = unsortedSequences.get(k + 1);
+					unsortedSequences.set(k, dob);
+					unsortedSequences.set(k + 1, temp);
+					
+
+				}
+
 			}
-			
+
 		}
 		return unsortedSequences;
-		}
-	
+	}
+	public static List<String> sortWords(List<String> words) {
+		for (int i = 0; i < words.size(); i++) {
+            for (int k = 0; k < words.size() - 1; k++) {
+                
+                // "a".compareTo( "b" ) => -1
+                // "b".compareTo( "a" ) => 1
+                // "b".compareTo( "b" ) => 0
+            
+            	//Look at the photo for hints; i have no clue what to do ngl
+            	
+               // if( words.get(k).compareTo(words.get(k+1) > ) {
+                //    String temp = words.get(k);
+                //    words.get(k) = arr3[ k+1 ];
+                //    arr3[ k+1 ] = temp;
+               // }
+            }
+        }
+		return words;
+	}
 //MoreAndMoreTests	
 
 	public static boolean isPrime(int i) {
@@ -126,8 +158,6 @@ public class Algorithms {
 		}
 
 	}
-
-	
 
 	
 

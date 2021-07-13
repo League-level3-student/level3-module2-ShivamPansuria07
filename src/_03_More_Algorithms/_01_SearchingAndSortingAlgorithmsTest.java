@@ -70,14 +70,14 @@ public class _01_SearchingAndSortingAlgorithmsTest {
 
    // @SuppressWarnings("deprecation")
 	// 7. Sort the exam results from lowest to highest.
-  //  @Test
-   //public void testSort() throws Exception {
-    //    List<Double> results = Arrays.asList(
-    //            new Double[] { 60.3, 60.2, 80.4, 67.2, 95.0, 85.5, 40.7, 68.2, 38.4, 94.2, 85.0, 84.5, 50.1, 66.6 });
-     //   assertEquals(Algorithms.sortScores(results).get(1),40.7, 0.0);
-     //   assertEquals(Algorithms.sortScores(results).get(13),95.0, 0.0);
+   @Test
+   public void testSort() throws Exception {
+        List<Double> results = Arrays.asList(
+                new Double[] { 60.3, 60.2, 80.4, 67.2, 95.0, 85.5, 40.7, 68.2, 38.4, 94.2, 85.0, 84.5, 50.1, 66.6 });
+       assertEquals(Algorithms.sortScores(results).get(1),40.7, 0.0);
+       assertEquals(Algorithms.sortScores(results).get(13),95.0, 0.0);
         
-   // }
+    }
 
 	
 
@@ -94,12 +94,12 @@ public class _01_SearchingAndSortingAlgorithmsTest {
     // 9. Sort the words in alphabetical order. Your teacher may need to
     // explain the compareTo() method.
 //    @Test
-//    public void testSortStringContents() throws Exception {
-//        List<String> words = Arrays
-//                .asList(new String[] { "aby", "dap", "alt", "alb", "ama", "ard", "ana", "ala", "awn", "dah", "bar",
-//                        "bee", "bel", "bot", "bis", "cep", "alk", "cog", "col", "cwm", "dag", "ait", "dal", "daw" });
-//        assertEquals("aby", Algorithms.sortWords(words).get(0));
-//        assertEquals("bar", Algorithms.sortWords(words).get(10));
-//        assertEquals("daw", Algorithms.sortWords(words).get(words.size() - 1));
-//    }
+    public void testSortStringContents() throws Exception {
+        List<String> words = Arrays
+                .asList(new String[] { "aby", "dap", "alt", "alb", "ama", "ard", "ana", "ala", "awn", "dah", "bar",
+                        "bee", "bel", "bot", "bis", "cep", "alk", "cog", "col", "cwm", "dag", "ait", "dal", "daw" });
+        assertEquals("aby", Algorithms.sortWords(words).get(0));
+        assertEquals("bar", Algorithms.sortWords(words).get(10));
+        assertEquals("daw", Algorithms.sortWords(words).get(words.size() - 1));
+    }
 }
