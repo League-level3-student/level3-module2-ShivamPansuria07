@@ -118,12 +118,14 @@ public class Algorithms {
 	public static List<String> sortWords(List<String> words) {
 		for (int i = 0; i < words.size(); i++) {
             for (int k = 0; k < words.size() - 1; k++) {
-                
+                //if() {
+                //	
+                //}
                 // "a".compareTo( "b" ) => -1
                 // "b".compareTo( "a" ) => 1
                 // "b".compareTo( "b" ) => 0
             
-            	//Look at the photo for hints; i have no clue what to do ngl
+            	
             	
                // if( words.get(k).compareTo(words.get(k+1) > ) {
                 //    String temp = words.get(k);
